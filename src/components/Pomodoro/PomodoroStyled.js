@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const PomodoroStyled = styled.div`
   width: 500px;
   height: 400px;
-  background-color: white;
-  border-radius: 10px;
+  background-color: rgb(226 232 240);
+  border-radius: 6px;
   padding: 20px;
   display: flex;
   flex-direction: column;

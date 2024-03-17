@@ -46,9 +46,14 @@ function TodoList() {
     localStorage.removeItem("task");
     getTask();
   };
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleSaveTask();
+    }
+  };
 
   return (
-    <div className="w-[500px] h-[400px] bg-white rounded-md p-5">
+    <div className="w-[1100px] h-[400px] bg-slate-200 rounded-md p-5">
       <p className="text-2xl font-medium text-center"> Tareitas</p>
       <div className="flex flex-col mt-5">
         <div className="flex">
@@ -57,6 +62,7 @@ function TodoList() {
             className="w-full h-10 border border-sky-500 rounded-md pl-2 mr-2 outline-none"
             value={value}
             onChange={(e) => setValue(e.target.value)}
+            onKeyPress={handleKeyPress}
           />
           <div
             className="flex justify-center items-center w-12 h-10 bg-purple-300 hover:bg-purple-400 transition-all rounded-md cursor-pointer"
